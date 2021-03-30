@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function a() {
+        var a=1;
+        function b() {
+            console.log(a)
+        }
+        return b;
+    }
+    var sd=a()
+    sd();
+
+
+    function c1() {
+
+    }
+    console.log(c1())
+
+
+    function c2(add) {
+        add++;
+    }
+    var add=18;
+    c2(add)
+    console.log(add)
+
+    function c3(add1) {
+        add1[0]++
+    }
+    var ads=[15]
+    c3(ads)
+    console.log(ads)
+
+    var a={};
+    Object.defineProperty(a,"name",{
+        value:"嘿嘿",
+        configurable:false,
+        writable:false,
+    })
+    console.log(a)
+    // for (var i in a){
+    //     console.log(a[i])
+    // }
+
+
+
+    var b=new Function("a1","a2","return a1+a2")
+    var b1=b(1,2)
+    console.log(b1)
+    b2()
+    function b2() {
+        console.log(12)
+    }
+    function b2() {
+        console.log(13)
+    }
+
+
+
+    // function zuo1() {
+    //     var zuo2=1;
+    //     zuo()
+    // }
+    // function zuo() {
+    //     console.log(zuo2)
+    // }
+    // zuo1()
+</script>
