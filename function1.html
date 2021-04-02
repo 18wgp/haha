@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    var Cacl={};
+    Cacl.add=function () {
+            var c = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                c += arguments[i]
+            }
+            return c
+    }
+    Cacl.minus=function () {
+            var c = arguments[0];
+            for (var i = 1; i < arguments.length; i++) {
+                c -= arguments[i]
+            }
+            return c
+    }
+    Cacl.multi=function () {
+            var c = 1
+            for (var i = 0; i < arguments.length; i++) {
+                c = c * arguments[i]
+            }
+            return c;
+    }
+    Cacl.divi=function () {
+            var c=1;
+            for (var i=0;i<arguments.length;i++){
+                if (i==0){
+                    c=arguments[i]/c
+                } else {
+                    c=c/arguments[i]
+                }
+            }
+            return c
+    }
+    var res1=Cacl.add(1,2,8)
+    var res2=Cacl.minus(1,2,-6,3)
+    var res3=Cacl.multi(1,2,4,2)
+    var res4=Cacl.divi(1,2,0.5,0.1)
+    console.log(res1,res2,res3,res4)
+</script>

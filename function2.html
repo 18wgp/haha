@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var A=function () {}
+    var a=new A();
+    // console.log(a)
+    console.log(Object.getPrototypeOf(a)===A.prototype)
+
+    var b1={}
+    var b2={age:13}
+    // console.log(b1)
+    // console.log(b2)
+    // console.log(Object.setPrototypeOf(b1,b2))
+    console.log(Object.getPrototypeOf(b1)===b2)
+
+    var B=function () {
+        this.foo="bar";
+    }
+    // console.log(B)
+    var b=new B();
+    // console.log(b)
+    var b=Object.setPrototypeOf({},B.prototype)
+    // console.log(b)
+B.call(b)
+    console.log(b)
+
+    function ad() {
+
+    }
+    ad.prototype.name="haha"
+    ad.prototype.age=12;
+    // console.log(ad)
+
+    function Animal() {
+
+    }
+
+    Animal.prototype.maoke="猫科"
+    Animal.prototype.daxiao="有大也有小"
+
+    function Cat() {
+        
+    }
+    Cat.prototype=new Animal()
+    // Cat.prototype=new Animal()
+    Cat.prototype.smial="体型小"
+    Cat.prototype.big="体型大"
+    // console.log(Cat)
+    function Tiger() {
+
+    }
+    Tiger.prototype=new Cat();
+    Tiger.prototype.big="大"
+    Tiger.prototype.zhuangtai="社会虎"
+    var c4=new Tiger()
+    console.log(c4)
+
+
+        // 例如：
+        // let [a1,a2,a3,a4]=[1,2,3,4]
+
+            //例如：
+            let {a22,b22,c22}={a22:12,b22:13,c22:14}
+
+
+</script>
