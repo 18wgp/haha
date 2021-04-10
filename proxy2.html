@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var handler={
+        deleteProperty(target, p) {
+            // console.log(target)
+            // console.log(p)
+            if (p in target){
+                return true
+            }
+        }
+    }
+    var a={
+        name:12,
+        age:12
+    }
+    // b=a
+    var b=new Proxy(a,handler)
+    delete b.name;
+    console.log(b)
+</script>

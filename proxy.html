@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var target={
+        name:1
+    };
+
+
+    // console.log(proxy)
+
+    var b=new Proxy(target,{
+        defineProperty(target,key,descriptor) {
+            if (key in target){
+
+            } else {
+                return descriptor
+            }
+
+            // console.log(target)
+        }
+    });
+    // b.foo='bar'
+
+    Object.defineProperty(b,'haha',{
+        value:"haha",
+        configurable: true,
+        writable: true,
+        enumerable: true
+    });
+    console.log(b)
+    // console.log(target)
+
+</script>

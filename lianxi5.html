@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var a='http://127.0.0.1/tmp.html?name=zhangsan&age=40#h1';
+    var http=a.substr(0,a.indexOf("p")+1)
+    var dizhi=a.substring(a.indexOf('1'),a.lastIndexOf('/'))
+    var lujing=a.substring(a.lastIndexOf('/'),a.lastIndexOf('?'))
+    var chanshu=a.substring(a.lastIndexOf('?')+1,a.lastIndexOf('#'))
+    var maodian=a.substr(a.lastIndexOf('#'))
+    console.log(maodian)
+</script>

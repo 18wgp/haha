@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="font-weight: bold">
+距离五一劳动节还有：<br>
+<br>
+<span></span>
+</body>
+</html>
+<script>
+    var span=document.querySelector("span")
+    // console.log(span)
+    var date=new Date()
+    var a=date.getDate();
+    a=1-a;
+
+    var b=date.getMonth()+1;
+    b=5-b;
+    if (b===1){
+        a=a+30-1
+    }
+   var c=date.getHours()
+    c=24-c+a*24;
+    c=c%24-1
+
+    var d=date.getMinutes()
+    d=60-d-1
+    if (d.length==1){
+        d="0"+d;
+    }
+
+    var e=date.getSeconds()
+    e=60-e-1;
+    if (e.length==1){
+        e="0"+e;
+    }
+
+span.innerText=a+"天"+c+"时"+d+"分"+e+"秒";
+
+    setInterval(function () {
+        var date=new Date()
+        var a=date.getDate();
+        a=1-a;
+
+        var b=date.getMonth()+1;
+        b=5-b;
+        if (b===1){
+            a=a+30-1
+        }
+        if (String(a).length==1){
+            a="0"+a;
+        }
+        var c=date.getHours()
+        c=24-c+a*24;
+        c=c%24-1
+        if (String(c).length==1){
+            c="0"+c;
+        }
+        var d=date.getMinutes()
+        d=60-d-1
+        if (String(d).length==1){
+            d="0"+d;
+        }
+
+        var e=date.getSeconds()
+        e=60-e-1;
+        if (String(e).length==1){
+            e="0"+e;
+        }
+        // console.log(e)
+        span.innerText=a+"天"+c+"时"+d+"分"+e+"秒"
+        },1000)
+</script>

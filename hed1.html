@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let obj1={
+        name:"haha",
+        age:13,
+        sex:"男",
+    };
+    function * ab() {
+      const keys=Object.keys(this);
+      for (var k of keys){
+          yield k;
+      }
+    }
+    obj1[Symbol.iterator]=ab;
+
+    for (var a of obj1){
+        console.log(a)
+    }
+</script>
